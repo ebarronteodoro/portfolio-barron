@@ -2,6 +2,7 @@
 import Image from "astro/components/Image.astro";
 import Layout from "../layouts/Layout.astro";
 import NeonButton from "../components/NeonButton.astro";
+import DotBackground from "../components/DotBackground.astro";
 ---
 
 <Layout
@@ -9,7 +10,7 @@ import NeonButton from "../components/NeonButton.astro";
 	description="Contrata a Esteban y descubre cómo puede llevar tu proyecto al siguiente nivel. Desarrollador web, programador y experto en tecnología."
 >
 	<main>
-		<section class="min-h-dvh flex flex-col md:flex-row bg-indigo-500 dark:bg-neutral-900 transition duration-300">
+		<section class="min-h-dvh flex flex-col md:flex-row transition duration-300">
 			<div class="md:w-6/10 mt-24 z-20 md:mt-0 flex items-center justify-center md:justify-normal gap-6 md:gap-14 2xl:gap-20 md:pl-24 2xl:pl-32">
 				<Image
 					width="200"
@@ -35,5 +36,6 @@ import NeonButton from "../components/NeonButton.astro";
 			>
 			</div>
 		</section>
+		<DotBackground />
 	</main>
 </Layout>
