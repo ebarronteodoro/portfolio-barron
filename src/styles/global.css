@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+@import "tailwindcss-animated";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  @keyframes nav-shadow {
+    to {
+      box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
+      --tw-ring-offset-shadow: 0 0 0 0px #fff;
+      --tw-ring-color: rgb(255 255 255 / .1);
+      --tw-ring-color: rgba(255, 255, 255, 0.1);
+      --tw-ring-shadow: 0 0 0 calc(1px + 0px) rgb(255 255 255 / .1);
+      --tw-shadow-colored: 0 0 #0000;
+      --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
+      backdrop-filter: blur(8px);
+      --tw-backdrop-blur: blur(8px);
+    }
+  }
+  --animate-nav-shadow: nav-shadow 1s linear both;
+}
+
+@layer utilities {
+  .animate-nav-shadow {
+    animation: var(--animate-nav-shadow);
+    animation-timeline: scroll();
+    animation-range: 0px 100px;
+  }
+}
